@@ -1,0 +1,322 @@
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('/Imagenes/Piedra\ papel\ o\ tijeras.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.inicio {
+    background-color: #ffffff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    color: #2c3e50;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Estilos para los botones de respuesta */
+.boton-respuesta {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Cambia el color de fondo y escala el botón cuando se pasa el mouse por encima */
+.boton-respuesta:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+/* Cambia el color de fondo y escala el botón cuando se enfoca (por ejemplo, al navegar con el teclado) */
+.boton-respuesta:focus {
+    background-color: #0056b3;
+    transform: scale(1.1);
+    outline: none;
+}
+
+/* Agrega una animación de "pulsación" al botón cuando se hace clic */
+.boton-respuesta:active {
+    animation: pulsate 0.3s ease-in-out;
+}
+
+/* Define la animación de "pulsación" */
+@keyframes pulsate {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+}
+
+.swal2-popup {
+    font-size: 1.6rem;
+    background-color: #fafafa;
+    border: 3px solid #007BFF;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.2);
+}
+
+.swal2-title {
+    color: #333333;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.swal2-confirm {
+    background-color: #007BFF;
+    color: #ffffff;
+    border: none;
+    box-shadow: none;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.swal2-confirm:hover {
+    transform: scale(1.1);
+    background-color: #0056b3;
+}
+
+.swal2-confirm:focus {
+    box-shadow: 0 0 0 2px #a6eca7;
+    outline: none;
+}
+
+.swal2-cancel {
+    background-color: #c5c5c5;
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
+}
+
+.swal2-cancel:hover {
+    transform: scale(1.1);
+    background-color: #b3b3b3;
+}
+
+.swal2-cancel:focus {
+    box-shadow: 0 0 0 2px #e0e0e0;
+    outline: none;
+}
+
+.mi-clase-popup-personalizada {
+    background-color: #fafafa;
+}
+
+.mi-clase-titulo-personalizada {
+    color: #007BFF;
+    font-weight: bold;
+}
+/*  */
+/*  */
+/*  */
+.juego {
+    background-color: #fafafa;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    padding: 40px;
+    margin: 40px auto;
+    width: 80%; /* Aumentado para mejor visualización en pantallas pequeñas */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.juego h2, .juego p {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.2em; /* Aumentado para mejor legibilidad */
+}
+
+.btn-juego {
+    padding: 10px 25px;
+    margin: 10px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s ease;
+}
+
+.btn-juego:hover {
+    transform: scale(1.1);
+}
+
+#marcador {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly; /* Distribuye los elementos de manera uniforme */
+    align-items: center; /* Centra los elementos verticalmente */
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    margin-bottom: 20px;
+}
+
+.marcador-individual {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    margin: 0 15px; /* Aumenta el margen para alejar los elementos de los bordes */
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+}
+
+.marcador-individual h3, .marcador-individual h4 {
+    color: #333;
+    margin-bottom: 10px;
+    padding: 0 10px; /* Añade un poco de padding para evitar que el texto toque los bordes */
+    animation: fadeIn 1s;
+}
+
+#marcador-jugador h4, #marcador-resultado h4, #marcador-computadora h4 {
+    color: #333;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 0;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+#nombre-jugador {
+    animation: bounce 2s;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-30px);}
+    60% {transform: translateY(-15px);}
+}
+
+/* ... tus otros estilos ... */
+
+/* Estilos del scroll al final de la hoja de estilos */
+#historial {
+    max-height: 200px;
+    overflow-y: auto;
+    scrollbar-width: thin; /* Ajusta el ancho del scrollbar */
+    scrollbar-color: #007BFF #fafafa; /* Cambia el color del scrollbar y del track */
+}
+
+/* Para navegadores basados en Webkit (Chrome, Safari) */
+#historial::-webkit-scrollbar {
+    width: 10px; /* Ajusta el ancho del scrollbar */
+}
+
+#historial::-webkit-scrollbar-track {
+    background: #fafafa; /* Cambia el color del track */
+}
+
+#historial::-webkit-scrollbar-thumb {
+    background-color: #007BFF; /* Cambia el color del scrollbar */
+    border-radius: 20px; /* Añade bordes redondeados al scrollbar */
+    border: 3px solid #fafafa; /* Añade un borde al scrollbar */
+}
+
+/*  */
+/*  */
+/*  */
+#fin {
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px; /* Aumentado para coincidir con los estilos anteriores */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Añadido para coincidir con los estilos anteriores */
+    color: #333; /* Añadido para coincidir con los estilos anteriores */
+}
+
+#fin h2 {
+    text-align: center; /* Centra el texto */
+    background-color: #007BFF; /* Agrega un color de fondo */
+    color: white; /* Cambia el color del texto a blanco para que resalte */
+    padding: 10px; /* Agrega un poco de espacio alrededor del texto */
+    border-radius: 5px; /* Agrega bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Agrega una sombra para que el título resalte más */
+}
+
+
+#tabla-historial {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#tabla-historial, #tabla-historial th, #tabla-historial td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    background-color: #fafafa; /* Cambiado a un color de fondo más claro */
+    color: #333; /* Cambiado a un color de texto más oscuro */
+}
+
+#tabla-historial th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #007BFF; /* Cambiado a un color de fondo más oscuro */
+    color: white;
+    font-family: 'Arial', sans-serif; /* Cambiado el tipo de letra */
+    font-size: 1.2em; /* Aumentado el tamaño de la letra */
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+#btn-jugar-de-nuevo {
+    padding: 10px 25px;
+    margin: 10px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s ease;
+}
+
+#btn-jugar-de-nuevo:hover {
+    transform: scale(1.1);
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Estilos/estilos.css">
+    <!-- SweetAlert2 CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.4/dist/sweetalert2.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Piedra Papel o Tijeras</title>
+</head>
+<body>
+    <!-- Sección de inicio, podría ser para presentar el juego o mostrar el menú principal -->
+    <div id="inicio" class="inicio" >
+        <h1>Bienvenido</h1> <!-- Título de bienvenida -->
+        <p>¿Te gustaría jugar Piedra, Papel o Tijeras?</p> <!-- Pregunta al usuario -->
+
+        <!-- Nuevo div que contiene los botones de respuesta -->
+    <div id="btnInicio" class="btnInicio">
+        <!-- Botón que representa la respuesta "Sí" -->
+        <button id="btnSi" class="boton-respuesta">Sí</button>
+        <!-- Botón que representa la respuesta "No" -->
+        <button id="btnNo" class="boton-respuesta">No</button>
+    </div>
+    </div>
+
+    <!-- Sección del juego, aquí podrías colocar los elementos interactivos y lógica del juego -->
+    <div id="juego" class="juego">
+        <!-- Título dinámico que incluirá el nombre del jugador -->
+    <h2 id="nombre-jugador">¡Acepta el desafío [Nombre del Jugador]!</h2>
+    <!-- Párrafo de instrucción -->
+    <p>Elige sabiamente 🤔 Piedra, Papel o Tijeras.</p>
+    <!-- Contenedor para los nombres del usuario y la computadora -->
+    <!-- Contenedor para el marcador -->
+    <div id="marcador" class="marcador">
+    <div id="marcador-jugador" class="marcador-individual">
+        <h3>Jugador</h3>
+        <h4>Resultado Jugador</h4>
+    </div>
+    <!-- Contenedor individual dentro del marcador para el Resultado -->
+    <div id="marcador-resultado" class="marcador-individual">
+        <h3>Resultado</h3>
+        <h4></h4>
+    </div>
+    <!-- Contenedor individual dentro del marcador para la Computadora -->
+    <div id="marcador-computadora" class="marcador-individual">
+        <h3>Computadora</h3>
+        <h4>Resultado computadora</h4>
+    </div>
+    </div>
+
+    <!-- Contenedor para los botones de comenzar y terminar o cualquier otro control de juego -->
+    <div id="comenzar-fin" class="comenzar-fin">
+        <div id="contenedor-juego" class="contenedor-juego">
+            <button id="btn-piedra" class="btn-juego"><i class="fas fa-hand-rock"></i> Piedra</button>
+            <button id="btn-papel" class="btn-juego"><i class="fas fa-hand-paper"></i> Papel</button>
+            <button id="btn-tijeras" class="btn-juego"><i class="fas fa-hand-scissors"></i> Tijeras</button>
+        </div>
+        <div class="contenedor-reinicio-fin">
+        <button id="btn-reiniciar" class="btn-juego">Reiniciar Partida</button>
+        <button id="btn-finalizar" class="btn-juego">Finalizar Partida</button>
+        </div>
+
+    </div>
+
+    <!-- Contenedor para el historial de movimientos o resultados -->
+    <div id="historial" class="historial">
+        <!-- Se puede listar el historial de las jugadas -->
+    </div>
+
+    </div>
+
+    <!-- Sección final, puede ser para mostrar el puntaje, resultados, o una pantalla de 'Game Over' -->
+    <div id="fin">
+        <h2>Historial de Partidas</h2>
+    <table id="tabla-historial">
+        <thead>
+            <tr>
+                <th>Partida</th>
+                <th>Resultado</th>
+                <th>Elección Jugador</th>
+                <th>Elección Computadora</th>
+                <th>Fecha</th>
+            </tr>
+        </thead>
+        <tbody  id="cuerpo-tabla">
+        </tbody>
+    </table>
+    <button id="btn-jugar-de-nuevo" class="btn-jugar-de-nuevo">Jugar de nuevo</button>
+    </div>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="/App-js/app.js"></script>
+</body>
+</html>
